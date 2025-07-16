@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Navigating Texas Contract Disputes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-item {
+            border: 2px solid;
+            transition: all 0.3s ease-in-out;
+        }
+        .flowchart-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -2.75rem;
+            transform: translateY(-50%);
+            height: 1rem;
+            width: 1rem;
+            border-radius: 9999px;
+            background-color: #ef5675;
+            border: 3px solid #ffffff;
+        }
+        .timeline-line {
+             background-color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003f5c] mb-2">Navigating Texas Contract Disputes</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">A visual guide to understanding, preventing, and resolving disagreements in the Lone Star State.</p>
+        </header>
+
+        <main>
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#374c80] mb-8">The Landscape of Texas Disputes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-[#7a5195]">What is a Contract Dispute?</h3>
+                        <p class="mb-4">A contract dispute is a conflict over the terms or performance of a legal agreement. These disagreements can stem from one party's failure to meet obligations (a "breach"), different interpretations of terms, or concerns about the contract's validity.</p>
+                        <p class="font-semibold">Failing to resolve disputes promptly can lead to significant financial loss and damage to crucial business relationships.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-center text-[#7a5195]">Why Are Disputes Common in Texas?</h3>
+                         <p class="text-center text-gray-600 mb-4">Texas's dynamic economy drives a high volume of transactions, making contracts essential and disputes more frequent.</p>
+                        <div class="chart-container h-64 md:h-72">
+                            <canvas id="industryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#374c80] mb-8">Anatomy of a Breach</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 col-span-1 md:col-span-2 lg:col-span-3">
+                        <h3 class="text-2xl font-bold mb-4 text-[#7a5195]">Types of Contract Breaches</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-[#bc5090]">Material Breach</h4>
+                                <p>A serious violation that defeats the contract's core purpose. The non-breaching party is released from their duties and can sue for damages immediately.</p>
+                            </div>
+                             <div>
+                                <h4 class="font-bold text-lg text-[#ef5675]">Minor Breach</h4>
+                                <p>A partial failure that doesn't undermine the entire agreement. The contract remains in effect, but the non-breaching party can seek damages for the specific failure.</p>
+                            </div>
+                             <div>
+                                <h4 class="font-bold text-lg text-[#ff764a]">Anticipatory Breach</h4>
+                                <p>When one party clearly indicates they will not fulfill their obligations before the performance is due. This allows the other party to take immediate legal action.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="bg-[#003f5c] text-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center">
+                        <h3 class="text-2xl font-bold mb-2">Time Limit for Action</h3>
+                        <p class="mb-4">Statute of Limitations</p>
+                        <div class="text-8xl font-black text-[#ffa600]">4</div>
+                        <p class="text-2xl font-bold">Years</p>
+                        <p class="mt-2">For both written and oral contracts in Texas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                 <h2 class="text-3xl font-bold text-center text-[#374c80] mb-8">Your Best Defense: Prevention</h2>
+                 <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8">Proactive measures are the most effective way to avoid costly and time-consuming contract disputes.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                        <div class="text-5xl mb-4">✍️</div>
+                        <h3 class="text-xl font-bold text-[#7a5195] mb-2">Draft Clear Contracts</h3>
+                        <p>Outline all rights, duties, deadlines, and expectations explicitly. Avoid ambiguous terms that lead to misunderstandings.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                         <div class="text-5xl mb-4">👨‍⚖️</div>
+                        <h3 class="text-xl font-bold text-[#bc5090] mb-2">Consult Legal Experts</h3>
+                        <p>Have an attorney review contracts before signing. They can identify potential risks and ensure compliance with Texas law.</p>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                        <div class="text-5xl mb-4">📂</div>
+                        <h3 class="text-xl font-bold text-[#ef5675] mb-2">Maintain Strong Records</h3>
+                        <p>Keep organized records of contracts, amendments, communications, and payments to provide clear evidence if a dispute arises.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#374c80] mb-8">Choosing Your Champion: The Right Attorney</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-center text-[#7a5195]">Essential Attorney Qualities</h3>
+                         <p class="text-center text-gray-600 mb-4">A successful outcome often depends on an attorney's specific skills and experience.</p>
+                        <div class="chart-container h-80">
+                            <canvas id="attorneySkillsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-[#7a5195]">When to Call for Backup</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start"><span class="text-2xl mr-3">❓</span><div><strong class="text-[#bc5090]">Ambiguous Terms:</strong> The contract is vague or open to multiple interpretations.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3">🚫</span><div><strong class="text-[#ef5675]">Failure to Perform:</strong> One party isn't delivering on goods, services, or payments as agreed.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3">⚖️</span><div><strong class="text-[#ff764a]">Legal Threats:</strong> The other party has threatened to sue or has already involved lawyers.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3">💰</span><div><strong class="text-[#ffa600]">Significant Financial Loss:</strong> The dispute involves high stakes, lost revenue, or large unpaid invoices.</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#374c80] mb-8">The Path to Resolution</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                         <h3 class="text-2xl font-bold mb-4 text-[#7a5195]">Four Primary Methods</h3>
+                         <p class="mb-6">The path to resolving a contract dispute varies in formality, cost, and control. Understanding your options is the first step toward finding a solution.</p>
+                         <div class="space-y-4 flex flex-col items-center">
+                            <div class="flowchart-item w-full max-w-md text-center p-4 rounded-lg border-[#ffa600] bg-[#ffa600]/10">
+                                <h4 class="font-bold text-[#ffa600]">1. Negotiation</h4>
+                                <p class="text-sm">Direct discussion to find a compromise. Best for preserving relationships.</p>
+                            </div>
+                            <div class="text-2xl text-gray-400">▼</div>
+                            <div class="flowchart-item w-full max-w-md text-center p-4 rounded-lg border-[#ff764a] bg-[#ff764a]/10">
+                                <h4 class="font-bold text-[#ff764a]">2. Mediation</h4>
+                                <p class="text-sm">A neutral mediator facilitates a voluntary agreement. Collaborative and non-binding.</p>
+                            </div>
+                            <div class="text-2xl text-gray-400">▼</div>
+                            <div class="flowchart-item w-full max-w-md text-center p-4 rounded-lg border-[#ef5675] bg-[#ef5675]/10">
+                                <h4 class="font-bold text-[#ef5675]">3. Arbitration</h4>
+                                <p class="text-sm">A private, formal process where an arbitrator issues a legally binding decision.</p>
+                            </div>
+                            <div class="text-2xl text-gray-400">▼</div>
+                             <div class="flowchart-item w-full max-w-md text-center p-4 rounded-lg border-[#bc5090] bg-[#bc5090]/10">
+                                <h4 class="font-bold text-[#bc5090]">4. Litigation</h4>
+                                <p class="text-sm">Taking the dispute to court. The most formal, costly, and time-consuming method.</p>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 mt-8 lg:mt-0">
+                        <h3 class="text-2xl font-bold mb-4 text-center text-[#7a5195]">Comparing Resolution Methods</h3>
+                        <p class="text-center text-gray-600 mb-4">Each method involves trade-offs between cost, time, and control over the final outcome.</p>
+                        <div class="chart-container h-96">
+                            <canvas id="resolutionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#374c80] mb-8">The Litigation Journey</h2>
+                <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">If a dispute proceeds to court, it follows a structured and often lengthy timeline. Here are the key phases.</p>
+                <div class="relative max-w-2xl mx-auto">
+                    <div class="absolute left-4 top-0 h-full w-0.5 timeline-line"></div>
+                    <div class="space-y-12">
+                        <div class="pl-12 relative timeline-item">
+                            <h4 class="font-bold text-xl text-[#7a5195]">Filing the Lawsuit</h4>
+                            <p>The process begins by filing a petition with the court, which outlines the legal claims and damages sought.</p>
+                        </div>
+                        <div class="pl-12 relative timeline-item">
+                            <h4 class="font-bold text-xl text-[#bc5090]">Discovery</h4>
+                            <p>Both sides exchange information and gather evidence through written questions, document requests, and depositions.</p>
+                        </div>
+                        <div class="pl-12 relative timeline-item">
+                            <h4 class="font-bold text-xl text-[#ef5675]">Pre-Trial Motions</h4>
+                            <p>Parties file motions to resolve legal issues, exclude evidence, or potentially decide the case without a full trial.</p>
+                        </div>
+                        <div class="pl-12 relative timeline-item">
+                            <h4 class="font-bold text-xl text-[#ff764a]">Trial</h4>
+                            <p>Evidence and arguments are presented to a judge or jury, who will deliver a verdict.</p>
+                        </div>
+                        <div class="pl-12 relative timeline-item">
+                            <h4 class="font-bold text-xl text-[#ffa600]">Post-Trial & Appeal</h4>
+                            <p>After the verdict, actions may include enforcing the judgment or appealing the decision based on legal errors.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const tooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (str, maxWidth) => {
+            if (str.length <= maxWidth) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const brilliantBluesPalette = ['#003f5c', '#7a5195', '#ef5675', '#ffa600'];
+        const brilliantBluesFull = ['#003f5c', '#374c80', '#7a5195', '#bc5090', '#ef5675', '#ff764a', '#ffa600'];
+
+        const industryChartCtx = document.getElementById('industryChart').getContext('2d');
+        new Chart(industryChartCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Oil & Gas', 'Technology', 'Real Estate', 'Other Industries'],
+                datasets: [{
+                    data: [35, 25, 20, 20],
+                    backgroundColor: brilliantBluesPalette,
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: tooltipCallback.plugins.tooltip
+                }
+            }
+        });
+
+        const attorneySkillsChartCtx = document.getElementById('attorneySkillsChart').getContext('2d');
+        new Chart(attorneySkillsChartCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Local Texas Law Knowledge', 'Relevant Case Experience', 'Negotiation Skills', 'Litigation Experience', 'Clear Communication'],
+                datasets: [{
+                    label: 'Importance Score',
+                    data: [5, 5, 4, 4, 5],
+                    backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                    borderColor: '#ef5675',
+                    pointBackgroundColor: '#ef5675',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#ef5675'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { 
+                            font: { size: 12 },
+                             callback: (label) => wrapLabel(label, 16)
+                        },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            stepSize: 1
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 5
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: tooltipCallback.plugins.tooltip
+                }
+            }
+        });
+
+        const resolutionChartCtx = document.getElementById('resolutionChart').getContext('2d');
+        new Chart(resolutionChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Negotiation', 'Mediation', 'Arbitration', 'Litigation'],
+                datasets: [
+                    {
+                        label: 'Cost & Time',
+                        data: [1, 3, 6, 10],
+                        backgroundColor: '#7a5195',
+                    },
+                    {
+                        label: 'Control',
+                        data: [10, 8, 3, 1],
+                        backgroundColor: '#ef5675',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: { display: true, text: 'Relative Score (1 = Low, 10 = High)' }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                         ...tooltipCallback.plugins.tooltip,
+                         mode: 'index',
+                         intersect: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
